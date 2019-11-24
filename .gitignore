@@ -1,0 +1,6 @@
+*.sublime-*
+pdf/*
+docs/.vscode/settings.json
+python*
+.DS_Store
+.travis.yml
