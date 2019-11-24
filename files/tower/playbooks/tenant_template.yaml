@@ -3,20 +3,20 @@
   hosts: bigip
   gather_facts: false
   connection: local
-    
+
   vars:
     tenant_body: "{{ lookup('file', '../app-templates/{{ f5_template }}.json', split_lines=False) }}"
     uri_method: "POST"
 
   tasks:
 
-    ##### AS3 POST ##### 
+    ##### AS3 POST #####
   - name: URI POST Tenant
     uri:
-       url: "https://{{ inventory_hostname }}/mgmt/shared/appsvcs/declare"
-       method: "{{ uri_method }}"
-       user: "admin"
-       password: "admin"
-       validate_certs: no
-       body: "{{ lookup('template', '../j2/tenant_base.j2') }}"
-       body_format: json
+      url: "https://{{ ansible_host }}/mgmt/shared/appsvcs/declare"
+      method: "{{ uri_method }}"
+      user: "{{ creds_big_ip.user }}"
+      password: "{{ creds_big_ip.password }}"
+      validate_certs: no
+      body: "{{ lookup('template', '../j2/tenant_base.j2') }}"
+      body_format: json
