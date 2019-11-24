@@ -1,7 +1,7 @@
-F5 Automation Labs
-==================
+F5 Automation with AMX
+======================
 
-Took the playbooks from this module for building F5 VIPs using AWX.
+Took the playbooks from this module for building F5 VIPs using AWX.\
 Original repositary is https://github.com/f5devcentral/f5-automation-labs
 
 The username/ password is hardcoded into the playbooks.\
