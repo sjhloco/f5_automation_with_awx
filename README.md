@@ -1,4 +1,4 @@
-F5 Automation with AMX
+F5 Automation with AWX
 ======================
 
 Took the playbooks from this module for building F5 VIPs using AWX. The Original repo is:\
